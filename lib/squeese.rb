@@ -87,7 +87,7 @@ module Squeese
 					datetime: datetime,
 					progname: progname || 'Squeese',
 					message: message
-				})
+				}) + "\n"
 			}
 		end
 		@@logger
