@@ -60,15 +60,15 @@ module Squeese
 		handler.call(args)
 	rescue => e
 		if msg
-			logger.warning({
-				exception: e,
+			logger.warn({
+				exception: e.message,
 				action: "drop",
 				job: name,
 				args: args
 			})
 		else
-			logger.warning({
-				exception: e,
+			logger.warn({
+				exception: e.message,
 				action: "retry"
 			})
 		end
